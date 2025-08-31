@@ -104,7 +104,6 @@
       ])
     );
 
-  // ✅ Helper to validate ID format (7 digits only)
   const isValidId = id => /^[0-9]{7}$/.test(id);
 
   const validate = (id, selections, data) => {
@@ -175,3 +174,4 @@
 
   document.addEventListener('DOMContentLoaded', onReady);
 })();
+
