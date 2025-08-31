@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Election Voting Page</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Multi-Position Election</h1>
+      <nav>
+        <a class="link" href="dashboard.html">Go to Dashboard</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <h2>Voter Information</h2>
+      <label for="voterId" class="label">ID Number</label>
+      <input id="voterId" type="text" class="input" placeholder="e.g., 2025-00123"/>
+      <p class="hint">Note: Each ID can vote only once.</p>
+    </section>
+
+    <form id="voteForm" class="grid">
+      <!-- Sections will be injected by voting.js -->
+    </form>
+
+    <section class="actions">
+      <button id="submitVote" type="button" class="btn primary">Submit Vote</button>
+      <button id="clearForm" type="button" class="btn">Clear Selections</button>
+    </section>
+
+    <section id="message" class="message" aria-live="polite"></section>
+
+    <footer class="footer">
+      <small>&copy; <span id="year"></span> Election System Demo</small>
+    </footer>
+  </main>
+
+  <script src="voting.js"></script>
+</body>
+</html>

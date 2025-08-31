@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Election Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Live Tally Dashboard</h1>
+      <nav>
+        <a class="link" href="index.html">Back to Voting</a>
+      </nav>
+    </header>
+
+    <section id="dashboard" class="grid">
+      <!-- Tallies will be injected by dashboard.js -->
+    </section>
+
+    <section class="actions">
+      <button id="refreshBtn" class="btn">Refresh Tallies</button>
+    </section>
+
+    <section id="updateNote" class="message subtle" aria-live="polite"></section>
+
+    <footer class="footer">
+      <small>&copy; <span id="year"></span> Election System Demo</small>
+    </footer>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* Basic, clean styling for the election app */
+:root{
+  --bg:#0b1020;
+  --card:#121833;
+  --accent:#6ea8fe;
+  --accent-2:#7ce2b3;
+  --text:#e6e9f2;
+  --muted:#a5acc1;
+  --danger:#ff6b6b;
+  --success:#3ddc97;
+  --border:#2a3359;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1000px 700px at 10% -10%, #172044 0%, #0b1020 45%, #0b1020 100%);
+  color: var(--text);
+}
+
+.container{
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 16px 64px;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom: 16px;
+}
+
+.header h1{
+  margin:0;
+  letter-spacing:.3px;
+}
+
+.link{
+  color: var(--accent);
+  text-decoration: none;
+  border:1px solid var(--border);
+  padding:10px 12px;
+  border-radius: 14px;
+  transition: .2s ease;
+}
+.link:hover{ background: #0d1430; }
+
+.card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  margin: 16px 0 22px;
+}
+
+.label{
+  display:block;
+  font-weight:600;
+  margin:.25rem 0 .35rem;
+}
+
+.input{
+  width:100%;
+  padding:12px 14px;
+  border-radius: 12px;
+  border:1px solid var(--border);
+  outline:none;
+  background:#0f1631;
+  color:var(--text);
+}
+.input:focus{ border-color: var(--accent); box-shadow:0 0 0 3px rgba(110,168,254,.18)}
+
+.hint{ color: var(--muted); margin-top:8px; }
+
+.grid{
+  display:grid;
+  gap:16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.section{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.section h3{
+  margin: 6px 0 12px;
+}
+
+.candidates{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.candidate{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  background:#0e1430;
+  border:1px solid var(--border);
+  padding:10px 12px;
+  border-radius: 14px;
+}
+
+.candidate label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  font-weight:500;
+}
+
+.radio{
+  width:18px; height:18px;
+}
+
+.btn{
+  padding: 12px 16px;
+  border-radius: 14px;
+  border:1px solid var(--border);
+  background: #0e1430;
+  color: var(--text);
+  cursor:pointer;
+  transition:.2s ease;
+}
+.btn:hover{ transform: translateY(-1px); }
+.btn.primary{
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color:#0b0f1d;
+  font-weight:700;
+  border:none;
+}
+.btn.danger{ background: var(--danger); color: #0b0f1d; border:none; }
+.btn.success{ background: var(--success); color: #0b0f1d; border:none; }
+
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+  flex-wrap: wrap;
+}
+
+.message{
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border:1px solid var(--border);
+  background:#0e1430;
+  min-height: 24px;
+}
+.message.error{ border-color:#5a1f2a; background: #241118; color:#ffb3c0; }
+.message.success{ border-color:#1f5a45; background:#10241d; color:#b5ffe2; }
+.message.subtle{ color: var(--muted); }
+
+.footer{
+  margin-top: 36px;
+  color: var(--muted);
+}
